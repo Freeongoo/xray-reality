@@ -28,6 +28,6 @@ RUN sh install.sh
 RUN qrencode -s 50 -o qr.png $(cat test.url)
 #end 
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+CMD ["xray", "-config", "/usr/local/etc/xray/config.json"]
 
 EXPOSE 443
