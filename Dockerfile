@@ -1,8 +1,8 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="admin@samsesh.net"
+LABEL maintainer="some"
 LABEL version="0.1"
-LABEL description="docker image for xray reality from https://github.com/sajjaddg/xray-reality"
+LABEL description="docker image for xray reality"
 
 # Install dependencies
 RUN apt-get update && \
@@ -15,7 +15,7 @@ RUN ln -fs /usr/share/zoneinfo/UTC /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
 # Install Xray-core
-RUN curl -L -H "Cache-Control: no-cache" -o /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.0/Xray-linux-64.zip && \
+RUN curl -L -H "Cache-Control: no-cache" -o /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-64.zip && \
     unzip /tmp/xray.zip -d /usr/bin/ && \
     rm /tmp/xray.zip && \
     chmod +x /usr/bin/xray
