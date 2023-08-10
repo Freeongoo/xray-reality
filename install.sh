@@ -10,7 +10,7 @@ curl -s https://raw.githubusercontent.com/Freeongoo/xray-reality/master/default.
 name=$(jq -r '.name' config.json)
 path=$(jq -r '.path' config.json)
 
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
+bash -c "$(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/046d9aa2432b3a6241d73c3684ef4e512974b594/install-release.sh)" @ install --version 1.8.1
 
 json=$(curl -s https://raw.githubusercontent.com/Freeongoo/xray-reality/master/config.json)
 
