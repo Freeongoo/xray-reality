@@ -26,7 +26,7 @@ docker build -t xrayreality .
 ```
 3. run 
 ``` bash
- docker run -d --name xrayreality -p443:443 xrayreality
+docker run -d --name xrayreality -p443:443 xrayreality
 ```
 4. get connection config :
 > get url
@@ -46,9 +46,13 @@ docker ps -a | grep xrayreality
 ``` bash
 docker stop xrayreality
 ```
+> connect :
+``` bash
+docker exec -it xrayreality bash
+```
 > start :
 ``` bash
-docker stop xrayreality
+docker start xrayreality
 ```
 >remove :
 ``` bash

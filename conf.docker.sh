@@ -16,9 +16,12 @@ newJson=$(echo "$json" | jq \
     '.inbounds[0].streamSettings.realitySettings.privateKey = $pk | 
      .inbounds[0].settings.clients[0].id = $uuid |
      .inbounds[0].streamSettings.realitySettings.shortIds += ["'$shortId'"]')
-echo "$newJson" | sudo tee /usr/bin/config.json >/dev/null
+sudo touch /home/config.json
+echo "$newJson" | sudo tee /home/config.json >/dev/null
 
-sudo service xray restart
+#sudo service xray restart
+
+sudo xray run -config /home/config.json
 
 echo "$url" >> /root/test.url
 
