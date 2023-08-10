@@ -18,7 +18,7 @@ curl -fsSL https://get.docker.com | sh
 ```
 1. clone this project 
 ``` bash
-git clone https://github.com/Freeongoo/xray && cd xray
+git clone https://github.com/Freeongoo/xray-reality && cd xray-reality
 ```
 2. build docker image 
 ``` bash
@@ -26,33 +26,33 @@ docker build -t xray .
 ```
 3. run 
 ``` bash
- docker run -d --name xray -p443:443 xray
+ docker run -d --name xrayreality -p443:443 xrayreality
 ```
 4. get connection config :
 > get url
 ``` bash
-docker exec -it xray cat /root/test.url
+docker exec -it xrayreality cat /root/test.url
 ```
 > view qrcode 
 ``` bash
-docker exec -it xray sh -c 'qrencode -s 120 -t ANSIUTF8 $(cat /root/test.url)'
+docker exec -it xrayreality sh -c 'qrencode -s 120 -t ANSIUTF8 $(cat /root/test.url)'
 ```
 ## how to manage ?
 > status :
 ``` bash
-docker ps -a | grep xray
+docker ps -a | grep xrayreality
 ```
 > stop :
 ``` bash
-docker stop xray
+docker stop xrayreality
 ```
 > start :
 ``` bash
-docker stop xray
+docker stop xrayreality
 ```
 >remove :
 ``` bash
-docker rm -f xray
+docker rm -f xrayreality
 ```
 #
 ## Note
