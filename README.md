@@ -22,7 +22,7 @@ git clone https://github.com/Freeongoo/xray-reality && cd xray-reality
 ```
 2. build docker image 
 ``` bash
-docker build -t xray .
+docker build -t xrayreality .
 ```
 3. run 
 ``` bash
