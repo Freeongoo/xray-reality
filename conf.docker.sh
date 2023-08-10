@@ -20,8 +20,6 @@ mkdir /usr/local/etc/xray
 touch /usr/local/etc/xray/config.json
 echo "$newJson" | tee /usr/local/etc/xray/config.json >/dev/null
 
-xray run -config /usr/local/etc/xray/config.json &
-
 echo "$url" >> /root/test.url
 
 exit 0
